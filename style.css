@@ -1,9 +1,11 @@
-.root{
-    margin-left: 50%;
+
+.control {
+    position: absolute;
+    top: 70%;
 }
-.left{
-   margin-left: 25%;
+.item {
+    float: left;
+    margin-left: 100px;
 }
-.right {
-    margin-left: 75%;
-}
+
+

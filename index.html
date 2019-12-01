@@ -6,7 +6,25 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+    <div  id = "tree" class = "tree">
+           
+    </div>
+    <div class = control>
+    <div class = "item">
+    Добавить элемент:
+    <p>Ключ: <input id = insertValueKey type="text" value="15"></p>
+    <p>Значение: <input id = insertValueText type="text" value="Some value"></p>
+    <p><input type="button" value="Добавить" onclick="insert()"></p>
+    </div>
+    <div class = "item">
+        <p>Ключ: <select id = "select"></select></p>
+        <p><div id = findedElement></div></p>
+        <input type="button" value="Найти" onclick="find()">
+        <input type="button" value="Удалить" onclick="remove()">
+    </div>
+    </div>
+    
     <script src = "release/test.js"></script>
+    
 </body>
 </html>
