@@ -1,3 +1,11 @@
+export interface Node <T> {
+  key: number;
+  value: T;
+  left: object;
+  right: object;
+  level: number; // свойство level будет нужно для отрисовки дерева чтобы знать уровень вложености элемента и расчитать положение элемента по вертикали
+  x: number; // свойство x определяет положение элемента по горизонтали, будет расчитываться при отрисовки дерева
+}
 class BinarySearchTree {
   root: object;
   constructor() {
@@ -11,15 +19,7 @@ class BinarySearchTree {
   }
   // добавление элемента
   insertNumberNode<T>(key: number, value: T): void {
-    interface Node {
-      key: number;
-      value: T;
-      left: object;
-      right: object;
-      level: number; // свойство level будет нужно для отрисовки дерева чтобы знать уровень вложености элемента и расчитать положение элемента по вертикали
-      x: number; // свойство x определяет положение элемента по горизонтали, будет расчитываться при отрисовки дерева
-    }
-    const nodeToAdd: Node = {
+    const nodeToAdd: Node <T> = {
       key: key,
       value: value,
       left: null,
@@ -218,8 +218,8 @@ class BinarySearchTree {
   }
 }
 
-let BSTtest = new BinarySearchTree();
-let arr = [12, 14, 7, 9, 6, 11, 8, 20, 13, 20];
+const BSTtest = new BinarySearchTree();
+const arr = [12, 14, 7, 9, 6, 11, 8, 20, 13, 20];
 for (let i = 0; i < arr.length; i++) {
   BSTtest.insertNumberNode(arr[i], i + 1);
 }
